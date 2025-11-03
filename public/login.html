@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h2>KMP</h2>
+    <div class="input-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter email address" required>
+    </div>
+    <div class="input-group password-container">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter password" required>
+      <div class="forgot-password">
+        <a href="forgot_password.html">Forgot password?</a>
+      </div>
+    </div>
+    <button type="submit" id="loginBtn">Login</button>
+
+    <div class="signup-link">
+      Don't have an account? <a href="signup.html">Sign up</a>
+    </div>
+
+    <div class="or-divider">or</div>
+    <div class="google-signin-button">
+      <button id="googleSignIn">
+        <img src="google_logo.jpg" alt="Google_Logo" class="google-logo">
+        Sign in with Google
+      </button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Login event listener
+      document.getElementById("loginBtn").addEventListener("click", function (event) {
+        event.preventDefault();
+        loginUser();
+      });
+
+      // Google sign-in event listener
+      document.getElementById("googleSignIn").addEventListener("click", function () {
+        window.location.href = "http://localhost:5000/auth/google";
+      });
+    });
+    
+    function loginUser() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      fetch("http://localhost:5000/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password })
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.error) {
+          alert(data.error);
+        } else {
+          localStorage.setItem("token", data.token);
+          alert("Login successful!");
+          window.location.href = "dashboard.html";
+        }
+      })
+      .catch(error => console.error("Error:", error));
+    }
+  </script>
+</body>
+</html>

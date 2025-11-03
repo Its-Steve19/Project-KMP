@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="showCart">
+  <div class="container">
+    <header>
+      <div class="title">PRODUCT LIST</div>
+      <div class="icon-cart">
+        <svg
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"
+          />
+        </svg>
+        <span>0</span>
+      </div>
+    </header>
+    <!-- All product items are now inside this .listProduct container -->
+    <div class="listProduct">
+      <div class="item">
+        <img src="Nike Air Max.jpg" alt="" />
+        <h2>NIKE AIRMAX</h2>
+        <div class="price">KSHS.3500</div>
+        <button class="addcart">Add TO Cart</button>
+      </div>
+      <div class="item">
+        <img src="Air force.jpg" alt="" />
+        <h2>AIR FORCE</h2>
+        <div class="price">KSHS.2500</div>
+        <button class="addcart">Add TO Cart</button>
+      </div>
+      <div class="item">
+        <img src="Tote bags.jpg" alt="" />
+        <h2>TOTE BAG</h2>
+        <div class="price">KSHS.350</div>
+        <button class="addcart">Add TO Cart</button>
+      </div>
+      <div class="item">
+        <img src="Denim Jacket.png" alt="" />
+        <h2>DENIM JACKET</h2>
+        <div class="price">KSHS.1800</div>
+        <button class="addcart">Add TO Cart</button>
+      </div>
+      <div class="item">
+        <img src="Durag.jpg" alt="" />
+        <h2>DURAG</h2>
+        <div class="price">KSHS.600</div>
+        <button class="addcart">Add TO Cart</button>
+      </div>
+      <div class="item">
+        <img src="Office Chair.jpg" alt="" />
+        <h2>OFFICE CHAIR</h2>
+        <div class="price">KSHS.5500</div>
+        <button class="addcart">Add TO Cart</button>
+      </div>
+      <div class="item">
+        <img src="Office Table.jpg" alt="" />
+        <h2>OFFICE TABLE</h2>
+        <div class="price">KSHS.7500</div>
+        <button class="addcart">Add TO Cart</button>
+      </div>
+      <div class="item">
+        <img src="Trainers.jpg" alt="" />
+        <h2>TRAINERS</h2>
+        <div class="price">KSHS.2300</div>
+        <button class="addcart">Add TO Cart</button>
+      </div>
+      <div class="item">
+        <img src="F50 Football boots.jpg" alt="" />
+        <h2>F50 Footballl Boots</h2>
+        <div class="price">KSHS.4500</div>
+        <button class="addcart">Add TO Cart</button>
+      </div>
+      <div class="item">
+        <img src="Sayona Woofer.jpg" alt="" />
+        <h2>SAYONA 3.1</h2>
+        <div class="price">KSHS.6500</div>
+        <button class="addcart">Add TO Cart</button>
+      </div>
+      <div class="item">
+        <img src="Sandy Buggy.jpg" alt="" />
+        <h2>SANDY BUGGY</h2>
+        <div class="price">KSHS.700</div>
+        <button class="addcart">Add TO Cart</button>
+      </div>
+      <div class="item">
+        <img src="Samsung Galaxy S23.jpg" alt="" />
+        <h2>SAMSUNG S23</h2>
+        <div class="price">KSHS.115000</div>
+        <button class="addcart">Add TO Cart</button>
+      </div>
+      <div class="item">
+        <img src="Safety boots.jpg" alt="" />
+        <h2>SAFETY BOOTS</h2>
+        <div class="price">KSHS.4500</div>
+        <button class="addcart">Add TO Cart</button>
+      </div>
+      <div class="item">
+        <img src="Polo Trouser Men.jpg" alt="" />
+        <h2>POLO TROUSER MEN</h2>
+        <div class="price">KSHS.1100</div>
+        <button class="addcart">Add TO Cart</button>
+      </div>
+    </div>
+  </div>
+  <div class="cartTab">
+    <h1>Shopping Cart</h1>
+    <div class="listCart">
+      <div class="item">
+        <img src="Nike Air Max.jpg" alt="" />
+        <div class="name">NAME</div>
+        <div class="totalPrice">3500</div>
+        <div class="quantity">
+          <span class="minus">≤</span>
+          <span>1</span>
+          <span class="plus">></span>
+        </div>
+      </div>
+    </div>
+    <div class="btn">
+      <button class="close">CLOSE</button>
+      <button class="checkout" id="mpesa-checkout">CHECK OUT</button>
+    </div>
+  </div>
+  <script src="dashboard.js"></script>
+</body>
+</html>
